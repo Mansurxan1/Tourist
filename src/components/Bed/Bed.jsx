@@ -14,7 +14,7 @@ const Bed = () => {
 
   return (
     <section className="bed" data-aos="fade-up" data-aos-delay="200">
-      <h2 className="title" data-aos="fade-up" data-aos-delay="300">Turistik joylar</h2>
+      <h2 className="title" data-aos="fade-up" data-aos-delay="300">Mehmonxonalar</h2>
       <div className="container">
         {bed.map((data, index) => (
           <div className="bed__box" key={index} data-aos="fade-up" data-aos-delay="400">

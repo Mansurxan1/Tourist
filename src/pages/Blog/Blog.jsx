@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Blog.scss";
 
 const Blog = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, [])
   React.useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -59,9 +66,9 @@ const Blog = () => {
             ))}
           </div>
 
-          <footer className="blog__footer" data-aos="zoom-in">
+          <section className="blog__footer" data-aos="zoom-in">
             <p>Sayohatni boshlash uchun blogimizni kuzatib boring!</p>
-          </footer>
+          </section>
         </div>
       </section>
     </main>

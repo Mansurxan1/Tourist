@@ -9,6 +9,7 @@
   &__box{
     max-width: 1200px;
     text-align: center;
+    width: 100%;
     a{
       max-width: 1200px;
       width: 100%;
@@ -20,11 +21,17 @@
       margin-top: 20px;
       max-width: 1200px;
       width: 100%;
+      overflow: hidden;
+      border-radius: 20px;
       img{
+        border-radius: 20px;
         max-width: 420px;
         width: 100%;
-        border-radius: 20px;
         height: 310px;
+        transition: 0.5s;
+        &:hover{
+          transform: scale(1.2);
+        }
       }
     }
   }
@@ -36,6 +43,30 @@
       &:nth-child(3){
         grid-column: span 2;
         margin: 0 auto;  
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .bed{
+    .container{
+      grid-template-columns: repeat(1, 1fr);
+    }
+    &__box{
+      a{
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+      &:nth-child(3){
+        grid-column: span 1;
+ 
+      }
+      &-img{
+        img{
+          max-width: 525px;
+          height: 300px;
+        }        
       }
     }
   }
