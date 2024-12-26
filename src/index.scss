@@ -1,0 +1,54 @@
+@use "./assets/style/font.scss";
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  // user-select: none;
+}
+html{
+  overflow-x: hidden;
+}
+.container{
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1330px;
+  width: 100%;
+}
+body{
+  overflow-x: hidden;
+  transition: overflow 0.3s ease;
+  font-family: Montserrat;
+  font-weight: 500;
+  position: relative;
+}
+::-webkit-scrollbar{
+  width: 1px;
+}
+button{
+  border: none;
+  font-family: Montserrat;
+  cursor: pointer;
+  font-weight: 500;
+  background: transparent;
+}
+
+.icon{
+  color: #50AF70;
+  font-size: 20px;
+}
+.title{
+  text-align: center;
+  margin: 30px auto 50px;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+@media(max-width: 500px){
+  .title{
+    margin: 20px 15px;
+    font-size: 25px;
+  }
+}

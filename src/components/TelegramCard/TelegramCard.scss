@@ -1,0 +1,70 @@
+.telegram__card {
+  background: #00A3FF;
+  border-radius: 16px;
+  padding: 32px;
+  max-width: 800px;
+  margin: 100px auto;
+  & .container{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    
+  }
+  &-qr {
+    background: white;
+    padding: 16px;
+    border-radius: 12px;
+    flex-shrink: 0;
+    
+    img {
+      max-width: 250px;
+      width: 100%;
+      max-height: 200px;
+      height: 100%;
+    }
+  }
+  
+  &-handle {
+    color: #000;
+    font-size: 14px;
+    margin-top: 8px;
+    text-align: center;
+    a{
+      color: #000;
+    }
+  }
+  
+  &-content {
+    color: white;
+  }
+  
+  &-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+  
+  &-description {
+    font-size: 16px;
+    margin-bottom: 24px;
+    line-height: 1.5;
+  }
+  
+  &-button {
+    background: white;
+    color: #00A3FF;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      background: rgba(255, 255, 255, 0.9);
+      transform: translateY(-1px);
+    }
+  }
+}
+

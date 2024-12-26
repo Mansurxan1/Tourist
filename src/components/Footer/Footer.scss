@@ -1,0 +1,138 @@
+.footer {
+  background: #666666cb;
+  color: white;
+  padding: 2rem 0;
+  font-family: Arial, sans-serif;
+  & .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    max-width: 300px;
+  }
+
+  &__logo-img {
+    width: 150px;
+    margin-bottom: 1rem;
+  }
+
+  &__contact {
+    font-size: 14px;
+    line-height: 30px;
+    a{
+      color: #fff;
+      &:hover{
+        color: rgb(0, 255, 0);
+      }
+    }
+    p {
+      margin: 0.5rem 0;
+    }
+  }
+
+  &__phones {
+    margin: 1rem 0;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    a {
+      color: white;
+      text-decoration: none;
+      &:hover {
+        color: #01ff01;
+      }
+    }
+  }
+
+  &__right {
+    text-align: center;
+  }
+
+  &__gov-logo {
+    width: 80px;
+    margin-bottom: 1rem;
+  }
+
+  &__payment {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 1rem;
+    img{
+      transition: 0.5s;
+      &:hover{
+        transform: scale(1.2);
+      }
+    }
+    svg{
+      font-size: 30px;
+      color: #ffffff;
+      transition: 0.5s;
+      &:hover{
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  &__bottom {
+    max-width: 1200px;
+    margin: 2rem auto 0;
+    padding: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+  }
+
+  &__social {
+    display: flex;
+    gap: 1rem;
+    .social-icon {
+      color: white;
+      font-size: 22px;
+      display: flex;
+      column-gap: 10px;
+      transition: 0.5s;
+      &:hover {
+        color: #00ff00;
+        transform: scale(1.2);
+        &:nth-child(3){
+          color: #00bbfffd;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    &__container {
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    &__right {
+      text-align: left;
+    }
+
+    &__payment {
+      justify-content: flex-start;
+    }
+
+    &__bottom {
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+    }
+  }
+}

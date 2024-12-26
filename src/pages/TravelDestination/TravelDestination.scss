@@ -1,0 +1,76 @@
+.travel__destination {
+  padding: 110px 0 50px;
+  &-content {
+    display: flex;
+    flex-direction: column;
+    img{
+      max-width: 650px;
+      width: 100%;
+    }
+  }
+  &-box{
+    display: flex;
+    gap: 15px;
+    height: 416px;
+    img{
+      max-width: 600px;
+      width: 100%;
+      object-fit: fill;
+      border-radius: 8px;
+    }
+  }
+  &-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  &-description {
+    text-align: center;
+    margin: 2rem auto;
+  }
+
+  &-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    width: 100%;
+    p {
+      background-color: #f0f0f0;
+      padding: 1rem;
+      border-radius: 4px;
+      display: flex;
+      text-align: center;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      strong{
+        position: absolute;
+        top: 10px;  
+        margin-bottom: 10px;
+      }
+      span{
+       
+      }
+    }
+  }
+
+  &-not-found {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #ff0000;
+  }
+  &-places{
+    li{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px 20px;
+      img{
+        margin-bottom: 20px;
+        border-radius: 15px;
+      }
+    }
+  }
+}
+

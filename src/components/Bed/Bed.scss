@@ -1,0 +1,42 @@
+.bed{
+  margin: 100px auto;
+  & >.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    margin: 0 auto;
+    gap: 30px;
+  }
+  &__box{
+    max-width: 1200px;
+    text-align: center;
+    a{
+      max-width: 1200px;
+      width: 100%;
+      display: block;
+      text-align: center;
+      color: #029EE4;
+    }
+    &-img{
+      margin-top: 20px;
+      max-width: 1200px;
+      width: 100%;
+      img{
+        max-width: 420px;
+        width: 100%;
+        border-radius: 20px;
+        height: 310px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1290px) {
+  .bed{
+    &__box{
+      &:nth-child(3){
+        grid-column: span 2;
+        margin: 0 auto;  
+      }
+    }
+  }
+}
