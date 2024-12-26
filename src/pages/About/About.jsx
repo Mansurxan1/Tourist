@@ -65,7 +65,8 @@ const About = () => {
             </p>
           </section>
 
-          <footer className="about__footer" data-aos="zoom-in">
+        </div>
+          <section className="about__footer" data-aos="zoom-in">
             <p>Sizning sayohatingiz, bizning masuliyatimiz!</p>
             <iframe 
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.6637919729337!2d69.24985387656346!3d41.316177100408375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b48a35ed52f%3A0x6d868958ae00961!2sTashkent%20City%20Mall!5e0!3m2!1suz!2s!4v1735031593767!5m2!1suz!2s" 
@@ -76,8 +77,7 @@ const About = () => {
               loading="lazy" 
               referrerPolicy="no-referrer-when-downgrade" 
             />
-          </footer>
-        </div>
+          </section>
       </section>
     </main>
   );

@@ -28,13 +28,18 @@
   }
 
   @media (max-width: 768px) {
-    &-title {
+  &-title {
       font-size: 28px;
     }
-
+  
     &-description,
     &-text {
       font-size: 16px;
+    }
+  }
+  @media (max-width: 500px) {
+    &-title {
+      font-size: 19px;
     }
   }
 }

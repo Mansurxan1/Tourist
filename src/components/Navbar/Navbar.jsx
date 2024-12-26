@@ -5,6 +5,13 @@ import { Link } from 'react-router-dom';
 import Navigation from '../Navigation/Navigation'; 
 
 const Navbar = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, [])
   const [showCatalog, setShowCatalog] = useState(false); 
   const [bgColor, setBgColor] = useState('transparent'); 
 

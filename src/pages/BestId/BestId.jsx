@@ -11,16 +11,16 @@ const BestIdPage = () => {
 
   return (
     <section className="best-page">
+      <h1 className="title">{tourData.title}</h1>
       <div className="container">
         <div className="best-page__content">
-          <h1 className="best-page__title">{tourData.title}</h1>
           <div className="best-page__box">
             <img src={tourData.image} alt={tourData.title} className="best-page__image" />
             <div className="best-page__details">
-              <p><strong>Sayohat manzili:</strong> {tourData.location}</p>
-              <p><strong>Biz bilan sayohat qilish orqali:</strong> {tourData.difficulty}</p>
-              <p><strong>Sayohat kunlari:</strong> <span>{tourData.date.join(", ")}</span></p>
-              <p><strong>Narxi:</strong> {tourData.price}</p>
+              <p><strong>Sayohat manzili:</strong> <br />{tourData.location}</p>
+              <p><strong>Biz bilan sayohat qilish orqali:</strong> <br /><br/> {tourData.difficulty}</p>
+              <p><strong>Sayohat kunlari:</strong> <br /> <span>{tourData.date.join(", ")}</span></p>
+              <p><strong>Narxi:</strong> <br /> {tourData.price}</p>
             </div>
           </div>
           <h2 className="best-page__description">{tourData.description}</h2>

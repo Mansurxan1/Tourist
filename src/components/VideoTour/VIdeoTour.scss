@@ -40,7 +40,7 @@
     }
     .video__tour-youtube{
       position: absolute;
-      top: 55%;
+      top: 60%;
       left: 50%;
       transform: translate(-50%, -50%);
     }
@@ -49,7 +49,7 @@
       object-fit: fill;
       max-width: 650px;
       width: 100%;
-      min-height: 400px;
+      height: 410px;
       border-radius: 30px;
     }
 
@@ -151,7 +151,7 @@
   .video__tour {
     .video__tour-thumb{
       width: 100%;
-      min-height: 250px;
+      min-height: 150px;
     }
   }
 }

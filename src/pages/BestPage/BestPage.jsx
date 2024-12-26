@@ -1,4 +1,5 @@
 import BestDayTours from '@/components/BestDayTours/BestDayTours'
+import "./BestPage.scss"
 
 const BestPage = () => {
   return (

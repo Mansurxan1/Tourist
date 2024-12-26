@@ -8,8 +8,17 @@ import News from "@/components/News/News"
 import TelegramCard from "@/components/TelegramCard/TelegramCard"
 import TourTurizm from "@/components/TourTurizm/TourTurizm"
 import Navigation from "@/components/Navigation/Navigation"
+import { useEffect } from "react"
 
 const Home = () => {
+  
+  useEffect(() => {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+      });
+    }, [])
   return (
     <>
       <Header />

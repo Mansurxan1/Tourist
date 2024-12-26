@@ -1,5 +1,5 @@
 .news{
-  padding: 80px 0;
+  padding: 90px 0;
   background: #F2F2F2;
   .title{
     margin-bottom: 40px;
@@ -29,11 +29,16 @@
       font-weight: 700;
     }
     &-img{
+      overflow: hidden;
+      border-radius: 10px;
         img{
           max-width: 310px;
           width: 100%;
-          border-radius: 10px;
           height: 190px;
+          transition: 0.5s; 
+          &:hover{
+            transform: scale(1.2);
+          }
         }
     }
     &-date{
@@ -74,12 +79,16 @@
     margin-top: 20px;
   }
 }
-@media(max-width: 1210px){
-  .new{
+
+@media(max-width: 610px){
+  .news{
+    .container{
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
     &__box{
-      &:nth-child(4){
-        margin: 0 auto;
-        grid-column: span 3;  
+      text-align: center;
+      &-title{
+        text-align: center !important;
       }
     }
   }

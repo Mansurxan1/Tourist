@@ -1,138 +1,135 @@
 .navbar {
+  padding: 1.5rem 0;
+  padding-bottom: 0;
   position: fixed;
   top: 0;
-  width: 100%;
-  z-index: 1000;
+  left: 0;
+  right: 0;
+  z-index: 999;
   transition: background-color 0.3s ease;
-}
-
-.navbar__top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-}
-
-.navbar__logo-img {
-  height: 40px;  
-}
-
-.navbar__hamburger {
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 20px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-
-  .bar {
-    height: 4px;
-    background-color: #000;
-    border-radius: 4px;
-    transition: all 0.3s ease;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 1rem;
   }
 
-  // Button when open
-  &.open .bar:nth-child(1) {
-    transform: rotate(45deg) translateY(7px);
-  }
-
-  &.open .bar:nth-child(2) {
-    opacity: 0;
-  }
-
-  &.open .bar:nth-child(3) {
-    transform: rotate(-45deg) translateY(-7px);
-  }
-}
-
-.navbar__links {
-  display: flex;
-  gap: 20px;
-  transition: opacity 0.5s ease, transform 0.5s ease;
-  opacity: 1;
-  transform: translateY(0);
-
-  .navbar__links-item {
-    color: #000;
-    font-weight: bold;
-    transition: color 0.3s ease;
-    &:hover {
-      color: #007bff;
-    }
-  }
-
-  &.open {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  &.closed {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-}
-
-.navbar__right {
-  display: flex;
-  align-items: center;
-
-  .navbar__right-phone {
-    margin-right: 20px;
-    font-weight: 700;
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
     text-decoration: none;
+    &-img {
+      max-width: 252px;
+      width: 100%;
+    }
   }
-  .navbar__right-btn {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
 
-    &:hover {
-      background-color: #0056b3;
+  &__links {
+    display: flex;
+    &-item {
+      color: #000;
+      font-size: 0.9rem;
+      padding: 8px;
+      text-align: center;
+      transition: 0.5s;
+      display: flex;
+      gap: 15px;
+      &:hover {
+        background: #645b5b9e;
+        border-radius: 10px;
+        color: #fff;
+      }
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    &-phone {
+      color: #333;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1.1rem;
+    }
+
+    &-btn {
+      background: #2196f3;
+      color: white;
+      border: none;
+      padding: 0.5rem 1.5rem;
+      border-radius: 4px;
+      cursor: pointer;
+
+      &:hover {
+        background: #1976d2;
+      }
+    }
+  }
+  .show{
+    display: none;
+    transition: 0.8s ease;
+  }
+  .none{
+      display: block; 
+      transition: 0.8s ease;
+    }
+  &__bottom {
+    background: #2196f3;
+    margin: 0 -2rem;
+    transition: all 0.3s ease;
+    &-list {
+      display: flex;
+      margin-left: 25px;
+      &-item {
+        padding: 15px 25px;
+        &:hover{
+          background: #fff;
+          a{
+            color: #00ff00;
+          }
+        }
+        &-link {
+          color: white;
+          font-size: 0.9rem;
+        }
+      }
+    }
+    &.none{
+      display: none;
+    }
+    &.show {
+      display: block; 
+    }
+  }
+  
+}
+@media(max-width: 1050px){
+  .navbar{
+    &__top{
+      justify-content: space-between;
+    }
+    &__logo-img{
+      max-width: 200px;
+    }
+    &__links{
+      display: none;
+    }
+    &__right-phone{
+      font-size: 1rem;
     }
   }
 }
-
-// For smaller screens
-@media (max-width: 1050px) {
-  .navbar__links {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    transform: translateY(-20px);
-    visibility: hidden;
-  }
-
-  .navbar__hamburger {
-    display: flex;
-  }
-
-  .navbar__links.open {
-    visibility: visible;
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@media(max-width: 605px){
+@media(max-width: 550px){
   .navbar{
     &__right-phone{
-    display: none;
+      display: none;
     }
-    &__logo{
-      &-img{
-        width: 150px;
-      }
+    &__right-btn{
+      display: none;
     }
   }
 }

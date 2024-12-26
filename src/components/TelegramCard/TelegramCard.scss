@@ -68,3 +68,14 @@
   }
 }
 
+@media(max-width:830px){
+  .telegram__card{
+    margin: 0 20px;
+    .container{
+      flex-direction: column;
+    }
+    &-content{
+      h2{font-size: 20px;}
+    }
+  }
+}

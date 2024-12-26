@@ -1,9 +1,12 @@
+import Bed from "../../components/Bed/Bed"
+import "./Hotel.scss"
 
 const Hotel = () => {
   return (
-    <div>
-      
-    </div>
+    <section className="bedpages">
+      <Bed />
+      <h2>Tez kunlarda ...</h2>
+    </section>
   )
 }
 
