@@ -8,13 +8,11 @@ const Ticket = () => {
   const [durationFrom, setDurationFrom] = useState('');
   const [durationTo, setDurationTo] = useState('');
   const [startDate, setStartDate] = useState(null);
-  const [showModal, setShowModal] = useState(false); // Modalni boshqarish uchun state
-  const [modalMessage, setModalMessage] = useState(''); // Modalga xabar qo'shish uchun state
+  const [showModal, setShowModal] = useState(false); 
+  const [modalMessage, setModalMessage] = useState(''); 
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    // Davomiylik va sanani tanlash tekshiruvi
     if (!durationFrom || !durationTo) {
       setModalMessage('Iltimos, davomiylikni tanlang!');
       setShowModal(true);
@@ -27,19 +25,17 @@ const Ticket = () => {
       return;
     }
 
-    // Agar davomiylik va sanalar to'liq tanlangan bo'lsa
     if (durationFrom && durationTo && startDate) {
       setModalMessage('Sayohat topilmadi, iltimos boshqa kunlarni tanlang.');
       setShowModal(true);
       return;
     }
 
-    // Qidiruv logikasi
     console.log('Qidiruv:', { tourType, durationFrom, durationTo, startDate });
   };
 
   const closeModal = () => {
-    setShowModal(false); // Modalni yopish
+    setShowModal(false); 
   };
 
   return (
@@ -104,7 +100,6 @@ const Ticket = () => {
         </form>
       </div>
 
-      {/* Modal */}
       {showModal && (
         <div className="modal-overlay">
           <div className="modal-content">

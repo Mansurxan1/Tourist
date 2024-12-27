@@ -3,7 +3,7 @@ import footerLogo from "@i/footer-logo.png"
 import card1 from "@i/card1.png"
 import card2 from "@i/card2.png"
 import { FaCcVisa } from "react-icons/fa";
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { FaWhatsapp } from "react-icons/fa";
 import { FaPhoneVolume } from "react-icons/fa6";
 import { FaTelegramPlane } from "react-icons/fa";
@@ -13,12 +13,18 @@ import { FaMoneyBillWave } from "react-icons/fa";
 import { useEffect } from 'react';
 
 function Footer() {
+  const location = useLocation(); 
+
   useEffect(() => {
     AOS.init({
       duration: 1000, 
       once: false,
     });
-  }, []);
+
+    if (location.pathname === '/') {
+      window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    }
+  }, [location]);
 
   return (
     <footer className="footer" data-aos="fade-up"> 
@@ -28,11 +34,9 @@ function Footer() {
             <img src={footerLogo} alt="SakhTravel" className="footer__logo-img" />
           </Link>
           <div className="footer__contact">
-          <p> Uzbekistan, Tashkent City Mall <span>
-            <a href="https://www.google.com/maps?q=Tashkent+City+Mall" target="_blank" rel="noopener noreferrer" >Xarita korish </a>
-            </span>
-          </p>
-
+            <p> Uzbekistan, Tashkent City Mall <span>
+              <a href="https://www.google.com/maps?q=Tashkent+City+Mall" target="_blank" rel="noopener noreferrer" >Xarita korish </a>
+            </span></p>
             <a href="mailto:paygambarqulovmp@gmail.com" target="_blank" rel="noreferrer">paygambarqulovmp@gmail.com</a>
             <div className="footer__phones">
               <a href="tel:+998911382094">+998 91 138 20 94</a>

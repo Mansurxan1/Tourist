@@ -100,6 +100,17 @@
     }
   }
 }
+.swiper-button-prev, 
+  .swiper-button-next{
+    display: none;
+  }
+@media (min-width: 1320px) {
+  .slider__slide-image {
+    height: 100vh;
+    object-fit: fill;
+  }
+}
+
 @media(max-width: 1000px){
   .slider__slide{
     &-content{

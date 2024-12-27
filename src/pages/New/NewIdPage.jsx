@@ -1,8 +1,16 @@
 import { useParams, useLocation } from 'react-router-dom';
 import { useTour } from "@/context/Context";
 import "./NewIdPage.scss"
+import { useEffect } from 'react';
 
 const NewIdPage = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, [])
   const { id } = useParams();
   const location = useLocation();
   const { news } = useTour();
