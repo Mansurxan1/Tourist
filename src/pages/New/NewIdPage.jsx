@@ -16,20 +16,20 @@ const NewIdPage = () => {
   console.log("Selected tour:", selectedTour);
 
   if (!selectedTour) {
-    return <div className="travel-destination__not-found">Тур не найден</div>;
+    return <div className="travel-destination__not-found">Ma'lumot kelmadi</div>;
   }
 
   return (
     <section className="travel-destination">
-      <div className="travel-destination__content">
-        <h2 className="travel-destination__title">{selectedTour.title}</h2>
-        <img src={selectedTour.img} alt={selectedTour.title} className="travel-destination__image" />
-        <p className="travel-destination__description">{selectedTour.description}</p>
-        <div className="travel-destination__details">
-          <p><strong>Местоположение:</strong> {selectedTour.location}</p>
-          <p><strong>Сложность:</strong> {selectedTour.difficulty}</p>
-          <p><strong>Дата:</strong> {selectedTour.date}</p>
-          <p><strong>Цена:</strong> {selectedTour.price}</p>
+      <div className="container">
+        <div className="travel-destination__content">
+          <h2 className="travel-destination__title">{selectedTour.title}</h2>
+          <img src={selectedTour.img} alt={selectedTour.title} className="travel-destination__image" />
+          <p className="travel-destination__description">{selectedTour.description}</p>
+          <div className="travel-destination__details">
+            <p> {selectedTour.date}</p>
+            <p> {selectedTour.text}</p>
+          </div>
         </div>
       </div>
     </section>

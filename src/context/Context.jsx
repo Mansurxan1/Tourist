@@ -57,7 +57,7 @@ const TourProvider = ({ children }) => {
       date: [
         "05.01.2025 — 10.01.25" ,
       ], 
-      price: "96 900 ₽",
+      price: "580 $",
       image: header2,
     },
     {
@@ -81,7 +81,7 @@ const TourProvider = ({ children }) => {
       date: [
         "05.01.2025 — 10.01.25",
       ], 
-      price: "96 900 ₽",
+      price: "600 $",
       image: header3,
     },
     { 
@@ -105,7 +105,7 @@ const TourProvider = ({ children }) => {
       date: [
         "05.01.2025 — 10.01.25",
       ], 
-      price: "96 900 ₽",
+      price: "450 $",
       image: "https://upload.wikimedia.org/wikipedia/commons/4/48/Taj_Mahal%2C_Iconic_view%2C_Agra%2C_India.jpg",
     },
     {
@@ -129,7 +129,7 @@ const TourProvider = ({ children }) => {
       date: [
         "05.01.2025 — 10.01.25",
       ], 
-      price: "96 900 ₽",
+      price: "450 $",
       image: "https://offloadmedia.feverup.com/parissecret.com/wp-content/uploads/2021/08/25162424/paris-vue.jpg",
     },
     {
@@ -153,7 +153,7 @@ const TourProvider = ({ children }) => {
       date: [
         "05.01.2025 — 10.01.25",
       ], 
-      price: "96 900 ₽",
+      price: "650 $",
       image: "https://i.pinimg.com/originals/12/dc/6a/12dc6ade0d730af3e27b957708fbd391.jpg",
     },
     {
@@ -177,7 +177,7 @@ const TourProvider = ({ children }) => {
       date: [
         "05.01.2025 — 10.01.25",
       ], 
-      price: "96 900 ₽",
+      price: "800 $",
       image: "https://www.thetimes.com/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F0636c382-ffa0-4979-941c-7bddb13cb190.jpg?crop=1320%2C880%2C440%2C0",
     },
     {
@@ -201,7 +201,7 @@ const TourProvider = ({ children }) => {
       date: [
         "05.01.2025 — 10.01.25",
       ], 
-      price: "96 900 ₽",
+      price: "840 $",
       image: "https://img.ixbt.site/live/images/original/24/96/61/2022/08/04/e4f2cdf890.png",
     },
   ];

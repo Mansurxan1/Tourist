@@ -105,18 +105,38 @@ const Contact = () => {
             <form onSubmit={handleSubmit}>
               <div className="form-group">
                 <label htmlFor="name">Ismingiz</label>
-                <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} 
-                  placeholder="Ismingizni kiriting" required />
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  placeholder="Ismingizni kiriting"
+                  required
+                />
               </div>
               <div className="form-group">
                 <label htmlFor="telegram">Telegram manzilingiz</label>
-                <input type="text" id="telegram" name="telegram" value={formData.telegram} onChange={handleChange}
-                  placeholder="Telegram manzilingizni kiriting" required />
+                <input
+                  type="text"
+                  id="telegram"
+                  name="telegram"
+                  value={formData.telegram}
+                  onChange={handleChange}
+                  placeholder="Telegram manzilingizni kiriting"
+                  required
+                />
               </div>
               <div className="form-group">
                 <label htmlFor="message">Xabar</label>
-                <textarea id="message" name="message" value={formData.message} onChange={handleChange}
-                  placeholder="Xabarni yozing" required ></textarea>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  placeholder="Xabarni yozing"
+                  required
+                ></textarea>
               </div>
               <button type="submit" className="submit-btn" disabled={isSubmitting}>
                 {isSubmitting ? "Yuborilyapti..." : "Yuborish"}
@@ -127,14 +147,20 @@ const Contact = () => {
 
           <section className="contact__map" data-aos="fade-right">
             <h2>Bizni Toping</h2>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.6637919729337!2d69.24985387656346!3d41.316177100408375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b48a35ed52f%3A0x6d868958ae00961!2sTashkent%20City%20Mall!5e0!3m2!1suz!2s!4v1735031593767!5m2!1suz!2s"
-              width="100%" height="450" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.6637919729337!2d69.24985387656346!3d41.316177100408375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b48a35ed52f%3A0x6d868958ae00961!2sTashkent%20City%20Mall!5e0!3m2!1suz!2s!4v1735031593767!5m2!1suz!2s"
+              width="100%"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
             />
           </section>
 
-          <section className="contact__footer" data-aos="zoom-in">
+          <footer className="contact__footer" data-aos="zoom-in">
             <p>Biz bilan bog'laning va sayohatingizni boshlang!</p>
-          </section>
+          </footer>
         </div>
       </section>
     </main>
@@ -142,3 +168,4 @@ const Contact = () => {
 };
 
 export default Contact;
+

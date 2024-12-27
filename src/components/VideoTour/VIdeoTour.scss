@@ -6,8 +6,7 @@
     margin-bottom: 20px;
   }
   .container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
     width: 100%;
     .swiper-slide {
       display: flex;
@@ -158,15 +157,12 @@
 
 @media(max-width: 550px){
   .video__tour {
-    .container{
-      grid-template-columns: repeat(1, 1fr);
-    }
     .video__tour-thumb{
       width: 100%;
       min-height: 250px;
     }
     .video__tour-youtube{
-      top: 65%;
+      top: 60%;
       width: 60px;
     }
   }

@@ -11,22 +11,34 @@ const VideoTour = () => {
   return (
     <section className="video__tour">
       <div className="title">Sayohat videolari</div>
-      <Swiper spaceBetween={20} 
-      slidesPerView={2} 
-      navigation 
-      pagination={{ clickable: true }}
-      loop={true} 
-      modules={[Navigation, Pagination]}
-      className="container">
+      <Swiper
+        spaceBetween={20}
+        slidesPerView={2} 
+        navigation
+        pagination={{ clickable: true }}
+        loop={true}
+        modules={[Navigation, Pagination]}
+        className="container"
+        breakpoints={{
+          0: {
+            slidesPerView: 1, 
+          },
+          600: {
+            slidesPerView: 2,
+          },
+        }}
+      >
         {videoTour.map((data, index) => (
-          <SwiperSlide key={index}>          
+          <SwiperSlide key={index}>
             <div className="video__tour-box">
-              <a href={data.video} target="_blank" rel="noopener noreferrer" className="video__tour-title">{data.name}</a>
+              <a href={data.video} target="_blank" rel="noopener noreferrer" className="video__tour-title">
+                {data.name}
+              </a>
               <a href={data.video} target="_blank" rel="noopener noreferrer" className="video__tour-video">
                 <img src={data.youtube} alt="" className="video__tour-youtube" />
                 <img src={data.img} alt={data.name} className="video__tour-thumb" />
                 <div className="video__tour-overlay">
-                  <span>{data.name} </span>
+                  <span>{data.name}</span>
                 </div>
               </a>
             </div>
@@ -38,4 +50,3 @@ const VideoTour = () => {
 };
 
 export default VideoTour;
-

@@ -10,7 +10,7 @@ const About = () => {
       left: 0,
       behavior: "smooth", 
     });
-    
+
     AOS.init({
       duration: 1000,
       easing: "ease-in-out", 
@@ -68,13 +68,8 @@ const About = () => {
         </div>
           <section className="about__footer" data-aos="zoom-in">
             <p>Sizning sayohatingiz, bizning masuliyatimiz!</p>
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.6637919729337!2d69.24985387656346!3d41.316177100408375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b48a35ed52f%3A0x6d868958ae00961!2sTashkent%20City%20Mall!5e0!3m2!1suz!2s!4v1735031593767!5m2!1suz!2s" 
-              width="600" 
-              height="450" 
-              style={{ border: 0 }} 
-              allowFullScreen 
-              loading="lazy" 
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.6637919729337!2d69.24985387656346!3d41.316177100408375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b48a35ed52f%3A0x6d868958ae00961!2sTashkent%20City%20Mall!5e0!3m2!1suz!2s!4v1735031593767!5m2!1suz!2s" 
+              width="600" height="450" style={{ border: 0 }} allowFullScreen loading="lazy" 
               referrerPolicy="no-referrer-when-downgrade" 
             />
           </section>

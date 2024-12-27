@@ -49,7 +49,7 @@ const TravelLocation = () => {
                 {data.date}
               </p>
               <div className="travel__price-all">
-                <p className="travel__box-price" data-aos="fade-up">{data.price}</p>
+                <p className="travel__box-price" data-aos="fade-up">{data.price} $</p>
                 <Link 
                   to={`/travel-destination/${data.id}`} 
                   state={{ tourData: data }} 

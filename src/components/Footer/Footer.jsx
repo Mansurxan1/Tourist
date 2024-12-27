@@ -30,8 +30,8 @@ function Footer() {
           <div className="footer__contact">
           <p> Uzbekistan, Tashkent City Mall <span>
             <a href="https://www.google.com/maps?q=Tashkent+City+Mall" target="_blank" rel="noopener noreferrer" >Xarita korish </a>
-  </span>
-</p>
+            </span>
+          </p>
 
             <a href="mailto:paygambarqulovmp@gmail.com" target="_blank" rel="noreferrer">paygambarqulovmp@gmail.com</a>
             <div className="footer__phones">
