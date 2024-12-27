@@ -8,12 +8,15 @@
   z-index: 999;
   transition: background-color 0.3s ease;
   box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
-
+  .navigation{
+    background: #fff;
+  }
   &__top {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     margin-bottom: 1rem;
+    position: relative;
   }
 
   &__logo {
@@ -39,7 +42,9 @@
       transition: 0.5s;
       display: flex;
       gap: 15px;
-
+      &.active{
+        color: rgb(0, 255, 0);
+      }
       &:hover {
         background: #645b5b9e;
         border-radius: 10px;
@@ -201,9 +206,9 @@
   .navbar__mobile-menu {
     display: flex;
     flex-direction: column;
-    background-color: #fff;
+    background: #f6ffeeeb;
     position: absolute; 
-    top: 60px; 
+    top: 50px; 
     left: 0;
     width: 100%;
     padding: 10px 0;
@@ -243,7 +248,6 @@
       padding: 15px;
       text-align: center;
       font-size: 1rem;
-      color: #000;
       text-decoration: none;
 
       &:hover {
@@ -255,19 +259,23 @@
 }
 
   
-@media(max-width: 1050px){
+@media(max-width: 1140px){
   .navbar{
     &__top{
       justify-content: space-between;
     }
     &__logo-img{
-      max-width: 200px;
+      max-width: 180px;
     }
     .navbar__hamburger{
       display: flex;
     }
     &__links{
       display: none;
+    }
+    &__right{
+      position: absolute;
+      right: 50px;
     }
     &__right-phone{
       font-size: 1rem;
@@ -276,6 +284,7 @@
 }
 @media(max-width: 550px){
   .navbar{
+    padding-top: 15px;
     &__right-phone{
       display: none;
     }

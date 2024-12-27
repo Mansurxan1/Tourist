@@ -78,14 +78,12 @@ const Contact = () => {
 
   return (
     <main>
-      <section className="contact">
-        <div className="container">
-          <div className="contact__main" data-aos="fade-up">
+      <article className="contact">
+        <section className="container contact__main" data-aos="fade-up">
             <h1>Biz Bilan Bog'laning</h1>
             <p className="contact__description">
               Agar sizda biron bir savol yoki taklif bo'lsa, quyidagi aloqa shakli orqali biz bilan bog'lanishingiz mumkin. Biz sizga yordam berishdan mamnun bo'lamiz!
             </p>
-          </div>
 
           <section className="contact__details" data-aos="fade-left">
             <h2>Bizning Kontakt Ma'lumotlarimiz</h2>
@@ -135,8 +133,8 @@ const Contact = () => {
           <section className="contact__footer" data-aos="zoom-in">
             <p>Biz bilan bog'laning va sayohatingizni boshlang!</p>
           </section>
-        </div>
-      </section>
+        </section>
+      </article>
     </main>
   );
 };
