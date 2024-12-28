@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { createContext, useContext } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import header1 from "@i/header1.jpg";
 import header2 from "@i/header2.jpg";
 import header3 from "@i/header3.jpg";
@@ -11,6 +11,22 @@ import qr from "@i/qrkod.svg"
 const TourContext = createContext();
 
 const TourProvider = ({ children }) => {
+  const [newss, setNews] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("API_URL");
+        const data = await response.json();
+        setNews(data);
+        setLoading(false); 
+      } catch (error) {
+        setLoading(false);
+      }
+    };
+    fetchData();
+  }, []);
   const bestDayTours  = [
     { 
       id: 1,
@@ -31,7 +47,7 @@ const TourProvider = ({ children }) => {
       location: "Birlashgan Arab Amirliklari, Dubai",
       difficulty: "Yangi madaniyatlar, Tabiiy go'zalliklar",
       date: [
-        "05.01.2025 — 10.01.25",
+        "05.01.2025 - 10.01.2025",
       ],  
       price: "550 $",
       image: header1,
@@ -55,7 +71,7 @@ const TourProvider = ({ children }) => {
       location: "Turkiya, Istanbul",
       difficulty: "Yangi madaniyatlar, Tabiiy go'zalliklar, Til ko'nikmalari, Shaxsiy rivojlanish",
       date: [
-        "05.01.2025 — 10.01.25" ,
+        "05.01.2025 - 10.01.2025" ,
       ], 
       price: "580 $",
       image: header2,
@@ -79,7 +95,7 @@ const TourProvider = ({ children }) => {
       location: "Yaponiya",
       difficulty: "Yangi madaniyatlar, Tabiiy go'zalliklar, Til ko'nikmalari, Shaxsiy rivojlanish",
       date: [
-        "05.01.2025 — 10.01.25",
+        "05.01.2025 - 10.01.2025",
       ], 
       price: "600 $",
       image: header3,
@@ -103,7 +119,7 @@ const TourProvider = ({ children }) => {
       location: "Hindiston, Mumbai",
       difficulty: "Yangi madaniyatlar, Tabiiy go'zalliklar, Til ko'nikmalari, Shaxsiy rivojlanish",
       date: [
-        "05.01.2025 — 10.01.25",
+        "05.01.2025 - 10.01.2025",
       ], 
       price: "450 $",
       image: "https://upload.wikimedia.org/wikipedia/commons/4/48/Taj_Mahal%2C_Iconic_view%2C_Agra%2C_India.jpg",
@@ -127,7 +143,7 @@ const TourProvider = ({ children }) => {
       location: "Fransiya, Parij shahri",
       difficulty: "Yangi madaniyatlar, Tabiiy go'zalliklar, Til ko'nikmalari, Shaxsiy rivojlanish",
       date: [
-        "05.01.2025 — 10.01.25",
+        "05.01.2025 - 10.01.2025",
       ], 
       price: "450 $",
       image: "https://offloadmedia.feverup.com/parissecret.com/wp-content/uploads/2021/08/25162424/paris-vue.jpg",
@@ -151,7 +167,7 @@ const TourProvider = ({ children }) => {
       location: "Koreya davlati",
       difficulty: "Yangi madaniyatlar, Tabiiy go'zalliklar, Til ko'nikmalari, Shaxsiy rivojlanish",
       date: [
-        "05.01.2025 — 10.01.25",
+        "05.01.2025 - 10.01.2025",
       ], 
       price: "650 $",
       image: "https://i.pinimg.com/originals/12/dc/6a/12dc6ade0d730af3e27b957708fbd391.jpg",
@@ -175,7 +191,7 @@ const TourProvider = ({ children }) => {
       location: "Misr davlati",
       difficulty: "Yangi madaniyatlar, Tabiiy go'zalliklar, Til ko'nikmalari, Shaxsiy rivojlanish",
       date: [
-        "05.01.2025 — 10.01.25",
+        "05.01.2025 - 10.01.2025",
       ], 
       price: "800 $",
       image: "https://www.thetimes.com/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F0636c382-ffa0-4979-941c-7bddb13cb190.jpg?crop=1320%2C880%2C440%2C0",
@@ -199,7 +215,7 @@ const TourProvider = ({ children }) => {
       location: "Xitoy davlati",
       difficulty: "Yangi madaniyatlar, Tabiiy go'zalliklar, Til ko'nikmalari, Shaxsiy rivojlanish",
       date: [
-        "05.01.2025 — 10.01.25",
+        "05.01.2025 - 10.01.2025",
       ], 
       price: "840 $",
       image: "https://img.ixbt.site/live/images/original/24/96/61/2022/08/04/e4f2cdf890.png",
@@ -225,7 +241,9 @@ const TourProvider = ({ children }) => {
       ],
       location: "Fransiya, Paris",
       difficulty: "Biz bilan barcha sayohatlar oson",
-      date: ["10.09.23", "19.09.23"],  
+      date: [
+        "10.09.2025 - 19.09.2025"
+      ],  
       price: "450",
       image: bestDayIcon,  
     },    
@@ -247,7 +265,9 @@ const TourProvider = ({ children }) => {
       ],
       location: "Angliya",
       difficulty: "biz bilan juda keng imkoniyatlar",
-      date: ["10.09.23", "19.09.23"], 
+      date: [
+        "10.09.2025 - 19.09.2025"
+      ], 
       price: "700",
       image: bestDayIcon,
     },
@@ -269,7 +289,9 @@ const TourProvider = ({ children }) => {
       ],
       location: "AQSH",
       difficulty: "biz bilan juda keng imkoniyatlar",
-      date: ["10.09.23", "19.09.23"], 
+      date: [
+        "10.09.2025 - 19.09.2025"
+      ],      
       price: "470",
       image: bestDayIcon,
     },
@@ -291,7 +313,9 @@ const TourProvider = ({ children }) => {
       ],
       location: "Germaniya",
       difficulty: "biz bilan juda keng imkoniyatlar",
-      date: ["10.09.23", "19.09.23"], 
+      date: [
+        "10.09.2025 - 19.09.2025"
+      ],      
       price: "480",
       image: bestDayIcon,
     },
@@ -313,7 +337,9 @@ const TourProvider = ({ children }) => {
       ],
       location: "Rossiya",
       difficulty: "biz bilan juda keng imkoniyatlar",
-      date: ["10.09.23", "19.09.23"], 
+      date: [
+        "10.09.2025 - 19.09.2025"
+      ],      
       price: "578",
       image: bestDayIcon,
     },
@@ -335,7 +361,9 @@ const TourProvider = ({ children }) => {
       ],
       location: "Taiwan",
       difficulty: "biz bilan juda keng imkoniyatlar",
-      date: ["10.09.23", "19.09.23"], 
+      date: [
+        "10.09.2025 - 19.09.2025"
+      ],      
       price: "685",
       image: bestDayIcon,
     },
@@ -357,7 +385,9 @@ const TourProvider = ({ children }) => {
       ],
       location: "Ispaniya",
       difficulty: "biz bilan juda keng imkoniyatlar",
-      date: ["10.09.23", "19.09.23"], 
+      date: [
+        "10.09.2025 - 19.09.2025"
+      ],      
       price: "395",
       image: bestDayIcon,
     },
@@ -379,7 +409,9 @@ const TourProvider = ({ children }) => {
       ],
       location: " Braziliya",
       difficulty: "biz bilan juda keng imkoniyatlar",
-      date: ["10.09.23", "19.09.23"], 
+      date: [
+        "10.09.2025 - 19.09.2025"
+      ],      
       price: "465",
       image: bestDayIcon,
     },
@@ -518,7 +550,7 @@ const TourProvider = ({ children }) => {
   }
 ]
 
-  const contextValue = { tourData, headerImages, bestDayTours, videoTour, bed, news, tourTurizm, telegramCard };
+  const contextValue = { tourData, headerImages, bestDayTours, videoTour, bed, news, tourTurizm, telegramCard, newss, loading };
 
   return (
     <TourContext.Provider value={contextValue}>

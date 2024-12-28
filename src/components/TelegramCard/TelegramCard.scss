@@ -4,6 +4,7 @@
   padding: 32px;
   max-width: 800px;
   margin: 100px auto;
+  text-align: justify;
   & .container{
     display: flex;
     align-items: center;
@@ -70,7 +71,7 @@
 
 @media(max-width:830px){
   .telegram__card{
-    margin: 0 20px;
+    margin: 30px 20px;
     .container{
       flex-direction: column;
     }
