@@ -41,4 +41,4 @@ Kontaktlar bo'limi
 +998 91 138 20 94
 Agar sizda savollar yoki fikrlar bo'lsa, quyidagi manzil orqali bog'lanishingiz mumkin:
 
-Telegram: Mening Telegramim https"//T.me//Mansurxan1
+Telegram: Mening Telegramim https://T.me//Mansurxan1
