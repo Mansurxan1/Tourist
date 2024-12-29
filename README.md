@@ -38,7 +38,7 @@ Asosiy sahifa
 Xizmatlar	
 Kontaktlar bo'limi
 📞 Bog'lanish
-+998 91 138 20 94
++998911382094
 Agar sizda savollar yoki fikrlar bo'lsa, quyidagi manzil orqali bog'lanishingiz mumkin:
 
 Telegram: Mening Telegramim https://T.me//Mansurxan1
